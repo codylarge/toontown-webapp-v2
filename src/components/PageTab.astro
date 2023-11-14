@@ -1,0 +1,23 @@
+---
+interface Props {
+  title: string;
+  href: string;
+}
+
+const { href, title } = Astro.props;
+---
+
+<a href={href} style={{ textDecoration: "none" }}>
+  <div>
+    {title}
+  </div>
+</a>
+
+<style>
+    div {
+      borderRadius: "10px",
+      padding: "10px",
+      backgroundColor: "#eaeaea",
+      display: "inline-block",
+    }
+</style>
