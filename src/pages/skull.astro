@@ -1,0 +1,158 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Skull Finder">
+    <main>
+        <h1>Skull Finder</h1>
+        <h3 class="rules">Rules: Start by clearing the top row, it is always garunteed safe<br><br>
+                Cells that touch skulls will display the number of skulls they touch<br><br>
+                Goal: Clear a path to the bottom of the board without clicking any skulls<br>
+                (Easy is the setting used in Toontown)</h3>
+
+        <body>
+            <p id="buttons" class ="diff-buttons">
+                <button id="difficulty" onclick="startGame(1)">Easy</button>
+                <button id="difficulty" onclick="startGame(2)">Medium</button>
+                <button id="difficulty" onclick="startGame(3)">EXTREME</button>
+            </p>
+            <h2>Total 💀 <span id="mines-count">0</span></h2>
+            <div><button id="reset" onclick="reset()">Reset</button></p>
+            <div id="board"></div>
+            <br>
+        </body>
+    </main>
+<script src="/scripts/skull.js" is:inline></script>
+</Layout>
+<style>
+    h1{
+        margin-top: 0;
+        margin-bottom: 0;
+        font-family: minnie;
+        font-size:80px;
+        text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
+    }
+    
+    h2{
+        display: inline-block;
+    }
+    
+    body {
+        background-color: black;
+        font-family: remington;
+        font-weight: bold;
+        text-align: center;
+    }
+    
+    #board {
+        width: 700px;
+        height: 700px;
+        border: 10px solid black;
+        background-color: darkred;
+    
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    #board div {
+        width: 98px;
+        height: 98px;
+        border: 1px solid rgb(56, 0, 0);
+    
+        /* text */
+        font-size: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .tile-clicked {
+        background-color: black;
+    }
+    
+    .x1 {
+        color: red;
+    }
+    
+    .x2 {
+        color: red;
+    }
+    
+    .x3 {
+        color: red;
+    }
+    
+    .x4 {
+        color: red;
+    }
+    
+    .x5 {
+        color: red;
+    }
+    
+    .x6 {
+        color: red;
+    }
+    
+    .x7 {
+        color: red;
+    }
+    
+    .x8 {
+        color: red;
+    }
+    
+    #flag-button {
+        width: 100px;
+        height: 50px;
+        font-size: 30px;
+        background-color: lightgray;
+        border: none;
+    }
+    
+    #reset{
+        display: none;
+        margin-bottom: 10px;
+    
+        padding:5px;
+        border: 4px solid black;
+        font-size: 25px;
+        font-family: impress;
+        padding-left: 20px;
+        padding-right:20px;
+        background-color: red;
+        border-radius: 50px;
+    }
+    #reset:hover{
+        background-color: darkred;
+    }
+    #reset:active{
+        background-color: rgb(61, 0, 0);
+        color:white;
+    }
+    
+    diff-buttons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #difficulty{
+        border: 4px solid black;
+        font-size: 25px;
+        font-family: impress;
+        padding:10px;
+        padding-left: 20px;
+        padding-right:20px;
+    }
+    
+    h3{
+        font-family: impress;
+        color: white;
+    }
+    
+    #buttons{
+        display: inline-block;
+    }
+</style>

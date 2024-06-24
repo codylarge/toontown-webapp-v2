@@ -6,57 +6,17 @@ import PageTab from "../components/PageTab.astro";
 
 <Layout title="Toontown Calculator">
   <main>
-    <svg
-      class="astro-a"
-      width="495"
-      height="623"
-      viewBox="0 0 495 623"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      aria-hidden="true"
-    >
-      <defs>
-        <linearGradient
-          id="paint0_linear_1805_24383"
-          x1="247.358"
-          y1="0"
-          x2="247.358"
-          y2="622.479"
-          gradientUnits="userSpaceOnUse"
-        >
-          <stop stop-opacity="0.9"></stop>
-          <stop offset="1" stop-opacity="0.2"></stop>
-        </linearGradient>
-      </defs>
-    </svg>
-    <h1>Welcome to <span class="text-gradient">Astro</span></h1>
+    <h1>zzzzzzzzzzzz</h1>
     <p class="instructions"></p>
-
-    <!-- 
+ 
     <ul role="list" class="link-card-grid">
-      <Card
-        href="https://docs.astro.build/"
-        title="Documentation"
-        body="Learn how Astro works and explore the official API docs."
-      />
-      <Card
-        href="https://astro.build/integrations/"
-        title="Integrations"
-        body="Supercharge your project with new frameworks and libraries."
-      />
-      <Card
-        href="https://astro.build/themes/"
-        title="Themes"
-        body="Explore a galaxy of community-built starter themes."
-      />
-      <Card
-        href="https://astro.build/chat/"
-        title="Community"
-        body="Come say hi to our amazing Discord community. ❤️"
-      />
-
+      <Card href="/skull" title="Skull Finder" body="Description for Link 1" color="#ff6347" />
+      <Card href="/link2" title="Link 2" body="Description for Link 2" color="#4682b4" />
+      <Card href="/link3" title="Link 3" body="Description for Link 3" color="#32cd32" />
+      <Card href="/link4" title="Link 4" body="Description for Link 4" color="#ffa500" />
+      <Card href="/link5" title="Link 5" body="Description for Link 5" color="#800080" />
+      <Card href="/link6" title="Link 6" body="Description for Link 6" color="#ff4500" />
     </ul>
-	-->
   </main>
 </Layout>
 
@@ -70,20 +30,24 @@ import PageTab from "../components/PageTab.astro";
     font-size: 20px;
     line-height: 1.6;
   }
-  .astro-a {
-    position: absolute;
-    top: -32px;
-    left: 50%;
-    transform: translatex(-50%);
-    width: 220px;
-    height: auto;
-    z-index: -1;
-  }
+
   h1 {
     font-size: 4rem;
     font-weight: 700;
     line-height: 1;
     text-align: center;
     margin-bottom: 1em;
+  }
+
+  .link-card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  @media (max-width: 768px) {
+    .link-card-grid {
+      grid-template-columns: 1fr;
+    }
   }
 </style>
